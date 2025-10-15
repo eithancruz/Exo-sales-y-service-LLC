@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO SALES & SERVICE LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección Superior - Logotipo y Nombre -->
+        <div class="header-section">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-shape">
+                        <div class="logo-part-1"></div>
+                        <div class="logo-part-2"></div>
+                        <div class="logo-part-3"></div>
+                    </div>
+                </div>
+                <div class="company-name">
+                    <h1 class="company-title">EXO</h1>
+                    <p class="company-subtitle">SALES & SERVICE LLC</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Inferior - Iconos de Contacto -->
+        <div class="contact-section">
+            <div class="contact-icons">
+                <div class="contact-item">
+                    <a href="https://web.whatsapp.com/#" target="_blank" rel="noopener noreferrer">
+                        <div class="icon whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </a>
+                    <span class="contact-label">WhatsApp</span>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://www.facebook.com/share/r/1GFT7yK48Z/" target="_blank" rel="noopener noreferrer">
+                        <div class="icon facebook-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </a>
+                    <span class="contact-label">Facebook</span>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/exosalesandservices/" target="_blank" rel="noopener noreferrer">
+                        <div class="icon instagram-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <span class="contact-label">Instagram</span>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon phone-icon" id="phone-copy" onclick="copyPhoneNumber()">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <span class="contact-label">Teléfono</span>
+                    <div id="copy-message" class="copy-message">¡Número copiado!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyPhoneNumber() {
+            const phoneNumber = '9739784160';
+            
+            // Crear un elemento temporal para copiar el texto
+            const tempInput = document.createElement('input');
+            tempInput.value = phoneNumber;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
+            
+            try {
+                // Copiar al portapapeles
+                document.execCommand('copy');
+                
+                // Mostrar mensaje de confirmación
+                showCopyMessage();
+            } catch (err) {
+                console.error('Error al copiar: ', err);
+                // Fallback para navegadores modernos
+                navigator.clipboard.writeText(phoneNumber).then(() => {
+                    showCopyMessage();
+                }).catch(err => {
+                    console.error('Error con clipboard API: ', err);
+                });
+            }
+            
+            // Limpiar el elemento temporal
+            document.body.removeChild(tempInput);
+        }
+        
+        function showCopyMessage() {
+            const message = document.getElementById('copy-message');
+            message.style.display = 'block';
+            message.style.opacity = '1';
+            
+            // Ocultar el mensaje después de 2 segundos
+            setTimeout(() => {
+                message.style.opacity = '0';
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 300);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
