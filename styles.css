@@ -1,0 +1,453 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ebe0e0; /* Fondo gris claro/beige */
+    background-image: url('bdff1e65-d094-4812-b834-fa4d3c10bf5f.jpg');
+    background-size: 50%; /* Tamaño del logo de fondo */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 200px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+/* Sección Superior - Logotipo y Nombre */
+.header-section {
+    margin-bottom: 80px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+
+/* Logotipo abstracto azul marino */
+
+
+
+
+
+
+
+
+
+/* Texto de la empresa */
+.company-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.company-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #1a365d; /* Azul marino oscuro */
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1;
+}
+
+.company-subtitle {
+    font-size: 30px;
+    font-weight: normal;
+    color: #1a365d;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.contact-item:first-child {
+    margin-top: 30px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.contact-item a:hover {
+    transform: scale(1.1);
+}
+
+#phone-copy {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+#phone-copy:hover {
+    transform: scale(1.1);
+}
+
+#phone-copy:active {
+    transform: scale(0.95);
+}
+
+.copy-message {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #25D366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos de contacto */
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.whatsapp-icon {
+    background-color: #25D366; /* Verde WhatsApp */
+}
+
+.facebook-icon {
+    background-color: #1877F2; /* Azul Facebook */
+}
+
+.instagram-icon {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.phone-icon {
+    background-color: #000000; /* Negro */
+}
+
+.contact-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.location-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    text-align: left;
+    margin-top: 2px;
+    margin-left: -370px;
+}
+
+/* Responsive Design */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+    
+    .contact-icons {
+        gap: 50px;
+    }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 20px;
+        max-width: 95%;
+    }
+    
+    .header-section {
+        margin-bottom: 60px;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .company-title {
+        font-size: 42px;
+        letter-spacing: 1.5px;
+    }
+    
+    .company-subtitle {
+        font-size: 15px;
+    }
+    
+    .contact-icons {
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-item {
+        gap: 10px;
+    }
+    
+    .icon {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+    
+    .contact-label {
+        font-size: 13px;
+    }
+    
+    .location-text {
+        font-size: 11px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .header-section {
+        margin-bottom: 50px;
+    }
+    
+    .company-title {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    
+    .company-subtitle {
+        font-size: 14px;
+    }
+    
+    .contact-icons {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .contact-item {
+        min-width: 80px;
+    }
+    
+    .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .contact-label {
+        font-size: 12px;
+    }
+    
+    .location-text {
+        font-size: 10px;
+    }
+    
+    .copy-message {
+        font-size: 11px;
+        padding: 6px 10px;
+        top: -35px;
+    }
+}
+
+/* Móviles medianos */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+    
+    .header-section {
+        margin-bottom: 40px;
+    }
+    
+    .logo-container {
+        gap: 15px;
+    }
+    
+    .company-title {
+        font-size: 32px;
+        letter-spacing: 0.5px;
+    }
+    
+    .company-subtitle {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+    
+    .contact-icons {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .contact-item {
+        min-width: 70px;
+        gap: 8px;
+    }
+    
+    .icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+    
+    .contact-label {
+        font-size: 11px;
+    }
+    
+    .location-text {
+        font-size: 9px;
+    }
+    
+    .copy-message {
+        font-size: 10px;
+        padding: 5px 8px;
+        top: -30px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+    .container {
+        padding: 10px 8px;
+    }
+    
+    .header-section {
+        margin-bottom: 30px;
+    }
+    
+    .company-title {
+        font-size: 28px;
+    }
+    
+    .company-subtitle {
+        font-size: 12px;
+    }
+    
+    .contact-icons {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-item {
+        min-width: 65px;
+        gap: 6px;
+    }
+    
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .contact-label {
+        font-size: 10px;
+    }
+    
+    .location-text {
+        font-size: 8px;
+    }
+    
+    .copy-message {
+        font-size: 9px;
+        padding: 4px 6px;
+        top: -25px;
+    }
+}
+
+/* Orientación landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 10px 20px;
+    }
+    
+    .header-section {
+        margin-bottom: 20px;
+    }
+    
+    .logo-container {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .company-title {
+        font-size: 24px;
+    }
+    
+    .company-subtitle {
+        font-size: 12px;
+    }
+    
+    .contact-icons {
+        gap: 30px;
+    }
+    
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .contact-label {
+        font-size: 10px;
+    }
+    
+    .location-text {
+        font-size: 8px;
+    }
+}
