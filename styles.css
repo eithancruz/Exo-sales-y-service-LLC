@@ -85,8 +85,11 @@ body {
 
 .contact-icons {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .contact-item {
@@ -227,7 +230,12 @@ body {
     }
     
     .contact-icons {
-        gap: 50px;
+        gap: 35px;
+        max-width: 600px;
+    }
+    
+    .contact-item {
+        min-width: 80px;
     }
 }
 
@@ -245,7 +253,7 @@ body {
     }
     
     .header-section {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
     
     .logo-container {
@@ -268,18 +276,18 @@ body {
     }
     
     .contact-icons {
-        gap: 40px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 30px;
+        max-width: 480px;
     }
     
     .contact-item {
         gap: 10px;
+        min-width: 70px;
     }
     
     .icon {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
         font-size: 22px;
     }
     
@@ -319,13 +327,13 @@ body {
     }
     
     .contact-icons {
-        gap: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 25px 20px;
+        max-width: 280px;
     }
     
     .contact-item {
-        min-width: 75px;
+        width: calc(33.33% - 14px);
+        min-width: 80px;
     }
     
     .contact-item:first-child {
@@ -339,12 +347,12 @@ body {
     }
     
     .contact-label {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .location-text {
-        font-size: 10px;
-        max-width: 90px;
+        font-size: 9px;
+        max-width: 80px;
     }
     
     .copy-message {
@@ -385,13 +393,13 @@ body {
     }
     
     .contact-icons {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 20px 15px;
+        max-width: 180px;
     }
     
     .contact-item {
-        min-width: 70px;
+        width: calc(50% - 8px);
+        min-width: 75px;
         gap: 8px;
     }
     
@@ -402,12 +410,12 @@ body {
     }
     
     .contact-label {
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .location-text {
-        font-size: 9px;
-        max-width: 80px;
+        font-size: 8px;
+        max-width: 70px;
     }
     
     .copy-message {
@@ -430,25 +438,25 @@ body {
     }
     
     .header-section {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     .company-title {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .company-subtitle {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .contact-icons {
-        gap: 18px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 18px 12px;
+        max-width: 160px;
     }
     
     .contact-item {
-        min-width: 65px;
+        width: calc(50% - 6px);
+        min-width: 70px;
         gap: 6px;
     }
     
@@ -459,12 +467,12 @@ body {
     }
     
     .contact-label {
-        font-size: 10px;
+        font-size: 9px;
     }
     
     .location-text {
-        font-size: 8px;
-        max-width: 70px;
+        font-size: 7px;
+        max-width: 65px;
     }
     
     .copy-message {
@@ -477,7 +485,7 @@ body {
 /* Orientación landscape en móviles */
 @media (max-height: 500px) and (orientation: landscape) {
     body {
-        background-size: 35%;
+        background-size: 30%;
         padding: 10px;
         padding-bottom: 20px;
         align-items: center;
@@ -488,7 +496,7 @@ body {
     }
     
     .header-section {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     .logo-container {
@@ -502,30 +510,34 @@ body {
     }
     
     .company-title {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .company-subtitle {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .contact-icons {
-        gap: 25px;
-        flex-wrap: nowrap;
+        gap: 20px 15px;
+        max-width: 600px;
+    }
+    
+    .contact-item {
+        min-width: 80px;
     }
     
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         font-size: 16px;
     }
     
     .contact-label {
-        font-size: 10px;
+        font-size: 9px;
     }
     
     .location-text {
-        font-size: 8px;
+        font-size: 7px;
         max-width: 60px;
     }
 }
